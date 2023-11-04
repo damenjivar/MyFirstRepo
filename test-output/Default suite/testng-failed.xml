@@ -3,14 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.automation.day12.Oct_8_2023.Assignment3">
+      <class name="com.automation.day16.Oct_22_2023.TestBase_Parent">
         <methods>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="searchWithInvalidProduct"/>
-          <include name="searchWithValidProduct"/>
+          <include name="TestBase"/>
         </methods>
-      </class> <!-- com.automation.day12.Oct_8_2023.Assignment3 -->
+      </class> <!-- com.automation.day16.Oct_22_2023.TestBase_Parent -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
