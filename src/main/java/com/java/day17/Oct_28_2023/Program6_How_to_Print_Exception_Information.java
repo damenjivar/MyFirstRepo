@@ -6,7 +6,7 @@ public class Program6_How_to_Print_Exception_Information {
 
 		try {
 			int a = 10, b = 0;
-			int c = 1 / b;
+			int c = a / b;
 			System.out.println(c);
 		} catch (Exception e) {
 			e.printStackTrace(); // This will print Exception Name, description and stack

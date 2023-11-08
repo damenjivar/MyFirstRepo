@@ -10,24 +10,23 @@ public class Date_Class_More_Concepts {
 	public static void main(String[] args) {
 		Date date = new Date();
 		System.out.println(date);
-		String emailTimeStamp = date.toString().replace(" ", "_").replace(":", "_");
-		System.out.println(emailTimeStamp);
+		String emailDateTimeStamp = date.toString().replace(" ", "_").replace(":", "_");
+		System.out.println(emailDateTimeStamp);
 
-		// what if you want a different date format?
-
-		// MM/dd/yyyy
+		// Do you want a different date format?
+		// M/dd/yyyy
 		// M/dd/yyyy hh:mm:ss
 
-		sdf = new SimpleDateFormat("M/dd/yyyy");
+		sdf = new SimpleDateFormat("M/dd/yyy hh:mm:ss");
 		System.out.println(sdf.format(date));
 
-		sdf = new SimpleDateFormat("M/dd/yyyy hh:mm:ss");
+		sdf = new SimpleDateFormat("MM/dd/yyy hh:mm:ss");
 		System.out.println(sdf.format(date));
 
-		sdf = new SimpleDateFormat("MMMM/dd/yyyy hh:mm:ss");
+		sdf = new SimpleDateFormat("MMM/dd/yyy hh:mm:ss");
 		System.out.println(sdf.format(date));
 
-		sdf = new SimpleDateFormat("MMM/dd/yyyy hh:mm:ss");
+		sdf = new SimpleDateFormat("MMMM/dd/yyy hh:mm:ss");
 		System.out.println(sdf.format(date));
 
 	}

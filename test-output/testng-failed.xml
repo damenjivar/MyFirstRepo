@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.automation.day16.Oct_22_2023.TestBase_Parent">
+      <class name="com.automation.day18.Oct_29_2023.LoginTest_Retry_Failed_TestCase">
         <methods>
-          <include name="TestBase"/>
+          <include name="tearDown"/>
+          <include name="loginValidationCorrectCredentials"/>
         </methods>
-      </class> <!-- com.automation.day16.Oct_22_2023.TestBase_Parent -->
+      </class> <!-- com.automation.day18.Oct_29_2023.LoginTest_Retry_Failed_TestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

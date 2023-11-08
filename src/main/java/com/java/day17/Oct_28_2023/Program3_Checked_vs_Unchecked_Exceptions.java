@@ -5,32 +5,35 @@ import java.io.FileNotFoundException;
 
 public class Program3_Checked_vs_Unchecked_Exceptions {
 
-	// what are CompileTime Exceptions and what are RunTime Exceptions?
+	// What are CompileTime Exceptions and what are RunTime Exceptions?
 
-	// Exceptions ALWAYS occur at Runtime. Exceptions NEVER occur at CompileTime.
+	// Exceptions ALWAYS occur at RunTime. Exceptions NEVER occur at CompileTime.
 
 	// CompileTime(Checked) Exceptions are the exceptions which can be handled or
-	// warned by the Compiler at Compile time.
+	// warned by the Compiler at Compile Time.
 
-	// RunTime(unchecked) Exceptions are the exceptions which CANNOT be handled by
+	// RunTime(Unchecked) Exceptions are the exceptions which cannot be handled by
 	// the compiler at Compile Time.
 
+	// runtime exceptions are exceptions that are handled during runtime
+
 	public static void main(String[] args) {
-		FileNotFoundExceptionValidation();
+		fileNotFoundExceptionValidation();
 		classNotFoundExceptionValidation();
 		arithmeticExceptionValidation();
 	}
 
-	public static void FileNotFoundExceptionValidation() {
-		// my intention is to handle a particular file in my laptop
-
+//compileTime exception
+	public static void fileNotFoundExceptionValidation() {
+		// my intention is to handled a particular file in my laptop
 		try {
-			FileInputStream ip = new FileInputStream("Desktop//abc");
+			FileInputStream ip = new FileInputStream("Desktop/abc");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
 	}
 
+//compileTime exception
 	public static void classNotFoundExceptionValidation() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -39,10 +42,11 @@ public class Program3_Checked_vs_Unchecked_Exceptions {
 		}
 	}
 
+//runTime exception
 	public static void arithmeticExceptionValidation() {
-		int a = 10, b = 0;
-		int c = a / b; // here lies the exception ... is compiler giving you a warning? No, this is an
-						// example of RunTime exception
+		int a = 10;
+		int b = 0;
+		int c = a / b; // here lies the exception, is compiler giving you a warning?
 		System.out.println(c);
 	}
 }
