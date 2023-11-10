@@ -21,7 +21,22 @@ public class Boxing_AutoBoxing_Unboxing_AutoBoxing {
 		byteAutoBoxing();
 		byteUnboxing();
 		byteAutoUnboxing();
-
+		shortBoxing();
+		shortAutoBoxing();
+		shortUnboxing();
+		shortAutoUnboxing();
+		longBoxing();
+		longAutoBoxing();
+		longUnboxing();
+		longAutoUnboxing();
+		doubleBoxing();
+		doubleAutoBoxing();
+		doubleUnboxing();
+		doubleAutoUnboxing();
+		booleanBoxing();
+		booleanAutoBoxing();
+		booleanUnboxing();
+		booleanAutoUnboxing();
 		floatBoxing();
 		floatAutoBoxing();
 		floatUnboxing();
@@ -70,78 +85,110 @@ public class Boxing_AutoBoxing_Unboxing_AutoBoxing {
 
 	public static void byteUnboxing() {
 		Byte a = 101;
-		Byte b = a.byteValue();
+		byte b = a.byteValue();
 		System.out.println("byteUnboxing: " + b);
 	}
 
 	public static void byteAutoUnboxing() {
 		Byte a = 101;
-		Byte b = a;
+		byte b = a;
 		System.out.println("byteAutoUnboxing: " + b);
 	}
 
 	public static void shortBoxing() {
-
+		short a = 10;
+		Short b = Short.valueOf(a);
+		System.out.println("shortBoxing: " + b);
 	}
 
 	public static void shortAutoBoxing() {
-
+		short a = 10;
+		Short b = a;
+		System.out.println("shortAutoBoxing: " + b);
 	}
 
-	public void shortUnboxing() {
-
+	public static void shortUnboxing() {
+		Short a = 10;
+		short b = a.shortValue();
+		System.out.println("shortUnboxing: " + b);
 	}
 
-	public void shortAutoUnboxing() {
-
+	public static void shortAutoUnboxing() {
+		Short a = 10;
+		short b = a;
+		System.out.println("shortAutoUnboxing: " + b);
 	}
 
-	public void longBoxing() {
-
+	public static void longBoxing() {
+		long a = 123123;
+		Long b = Long.valueOf(a);
+		System.out.println("longBoxing: " + b);
 	}
 
-	public void longAutoBoxing() {
-
+	public static void longAutoBoxing() {
+		long a = 123123;
+		Long b = a;
+		System.out.println("longAutoBoxing: " + b);
 	}
 
-	public void longUnboxing() {
-
+	public static void longUnboxing() {
+		Long a = 123123L;
+		long b = a.longValue();
+		System.out.println("longUnboxing: " + b);
 	}
 
-	public void longAutoUnboxing() {
-
+	public static void longAutoUnboxing() {
+		Long a = 123123L;
+		long b = a;
+		System.out.println("longAutoUnboxing: " + b);
 	}
 
-	public void doubleBoxing() {
-
+	public static void doubleBoxing() {
+		double a = 1.23;
+		Double b = Double.valueOf(a);
+		System.out.println("doubleBoxing: " + b);
 	}
 
-	public void doubleAutoBoxing() {
-
+	public static void doubleAutoBoxing() {
+		double a = 1.32;
+		Double b = a;
+		System.out.println("doubleAutoBoxing: " + b);
 	}
 
-	public void doubleUnboxing() {
-
+	public static void doubleUnboxing() {
+		Double a = 1.2;
+		double b = a.doubleValue();
+		System.out.println("doubleUnboxing: " + b);
 	}
 
-	public void doubleAutoUnboxing() {
-
+	public static void doubleAutoUnboxing() {
+		Double a = 1.23;
+		double b = a;
+		System.out.println("doubleAutoUnboxing: " + b);
 	}
 
-	public void booleanBoxing() {
-
+	public static void booleanBoxing() {
+		boolean a = true;
+		Boolean b = Boolean.valueOf(a);
+		System.out.println("booleanBoxing: " + b);
 	}
 
-	public void booleanAutoBoxing() {
-
+	public static void booleanAutoBoxing() {
+		boolean a = false;
+		Boolean b = a;
+		System.out.println("booleanAutoBoxing: " + b);
 	}
 
-	public void booleanUnboxing() {
-
+	public static void booleanUnboxing() {
+		Boolean a = 1 > 2;
+		boolean b = a.booleanValue();
+		System.out.println("booleanUnboxing: " + b);
 	}
 
-	public void booleanAutoUnboxing() {
-
+	public static void booleanAutoUnboxing() {
+		Boolean a = 1 < 2;
+		boolean b = a;
+		System.out.println("booleanAutoUnboxing: " + b);
 	}
 
 	public static void floatBoxing() {
@@ -153,18 +200,18 @@ public class Boxing_AutoBoxing_Unboxing_AutoBoxing {
 	public static void floatAutoBoxing() {
 		float a = 3.14f;
 		Float b = a;
-		System.out.println("floatAutoBoxing" + b);
+		System.out.println("floatAutoBoxing: " + b);
 	}
 
 	public static void floatUnboxing() {
 		Float result = 3.14f;
-		Float newResult = result.floatValue();
-		System.out.println("FloatUnboxing" + newResult);
+		float newResult = result.floatValue();
+		System.out.println("FloatUnboxing: " + newResult);
 	}
 
 	public static void floatAutoUnboxing() {
 		Float result = 3.14f;
-		Float newResult = result;
+		float newResult = result;
 		System.out.println("floatAutoUnboxing: " + newResult);
 	}
 

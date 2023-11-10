@@ -25,7 +25,7 @@ public class Class2_Arrays_vs_Collections_Framework {
 
 		ArrayList al = new ArrayList();
 		al.add(10); // 10 is an Integer object
-		al.add("java"); //
+		al.add("java");
 		al.add('c');
 		al.add(obj1);
 

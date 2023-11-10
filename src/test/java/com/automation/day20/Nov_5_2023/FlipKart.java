@@ -17,15 +17,16 @@ public class FlipKart {
 	public void formalShirts() throws Exception {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("https://flipkart.com"); //fix
+		driver.get(
+				"https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts");
 		// i want to print the brand name, description of the shirt, price of the shirt,
 		// and discount % is displayed for each of the 40 items.
 
 		Thread.sleep(2000);
 		List<WebElement> formalShirts = driver.findElements(By.cssSelector("div._2WkVRV"));
 		List<WebElement> description = driver.findElements(By.cssSelector("a.IRpwTa"));
-		List<WebElement> prices = driver.findElements(By.cssSelector("div.30jeq3"));
-		List<WebElement> discountPercentage = driver.findElements(By.cssSelector("div.3Ay65b"));
+		List<WebElement> prices = driver.findElements(By.cssSelector("div._30jeq3"));
+		List<WebElement> discountPercentage = driver.findElements(By.cssSelector("div._3Ay6Sb"));
 
 		for (int i = 0; i < formalShirts.size(); i++) {
 			System.out.println(formalShirts.get(i) + "-----" + description.get(i).getText() + "------"

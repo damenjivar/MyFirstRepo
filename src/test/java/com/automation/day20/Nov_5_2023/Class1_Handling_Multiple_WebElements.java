@@ -15,7 +15,6 @@ public class Class1_Handling_Multiple_WebElements {
 
 	@Test
 	public void bbcDotCom() {
-
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://bbc.com");
