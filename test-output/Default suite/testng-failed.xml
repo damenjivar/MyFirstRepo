@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.automation.day20.Nov_5_2023.BBC_Links_With_ResponseCode_Validation">
+      <class name="com.automation.day22.Nov_12_2023.DatePicker_Practice">
         <methods>
-          <include name="bbcLinksHeader"/>
+          <include name="datePickerTest1"/>
         </methods>
-      </class> <!-- com.automation.day20.Nov_5_2023.BBC_Links_With_ResponseCode_Validation -->
+      </class> <!-- com.automation.day22.Nov_12_2023.DatePicker_Practice -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
