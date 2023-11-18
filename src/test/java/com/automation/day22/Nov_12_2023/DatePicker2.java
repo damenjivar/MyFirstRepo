@@ -40,7 +40,7 @@ public class DatePicker2 {
 			return;
 		}
 
-		if (selectMonth.equals("February") && Integer.parseInt(selectYear) > 29) {
+		if (selectMonth.equals("February") && Integer.parseInt(selectDay) > 29) {
 			System.out.println("invalid feb month date");
 			return;
 		}
@@ -56,16 +56,14 @@ public class DatePicker2 {
 			year = monthYear.split(" ")[1];
 		}
 
-		Thread.sleep(1000);
-//HW fix below
-		String xpathDayText = "//td[@data-handler = 'selectDay']/a[text() = \''" + selectDay + "\']";
+		Thread.sleep(2000);
 
-		try {
+		String xpathDayText = "//td[@data-handler = 'selectDay']/a[text() = '" + selectDay + "']";
+
+		if (driver.findElement(By.xpath(xpathDayText)).isDisplayed()) {
 			driver.findElement(By.xpath(xpathDayText)).click();
-		} catch (Exception e) {
+		} else {
 			System.out.println("invalid date");
-			e.printStackTrace();
 		}
-
 	}
 }

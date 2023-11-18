@@ -10,7 +10,7 @@ public class Recording_LoginTest {
 	public WebDriver driver;
 
 	@Test
-	public void recordingLoginTets() throws Exception {
+	public void recordingLoginTest() throws Exception {
 
 		ScreenRecorderUtil.startRecord("recordingLoginTest");
 

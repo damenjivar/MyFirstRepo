@@ -71,11 +71,11 @@ public class TN_ImplicitWait_ExplicitWait {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("My Account"))).click(); // locator option
 		// driver.findElement(By.linkText("My Account")).click(); // let's say My
-		// Account is misbehaving
+		// Account is misbehaving.
 
 		WebElement loginDropdownOption = driver.findElement(By.linkText("Login"));
-		wait.until(ExpectedConditions.elementToBeClickable(loginDropdownOption)).click(); // webelement option
-		//driver.findElement(By.linkText("Login")).click();
+		wait.until(ExpectedConditions.elementToBeClickable(loginDropdownOption)).click(); // WebElement option
+		// driver.findElement(By.linkText("Login")).click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("input-email"))).sendKeys("seleniumpanda@gmail.com");
 		// driver.findElement(By.id("input-email")).sendKeys("seleniumpanda@gmail.com");

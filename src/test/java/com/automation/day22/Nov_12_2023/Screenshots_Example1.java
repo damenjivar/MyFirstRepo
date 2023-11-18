@@ -11,7 +11,7 @@ import org.openqa.selenium.io.FileHandler;
 import org.testng.annotations.Test;
 
 public class Screenshots_Example1 {
-//HW
+
 	WebDriver driver;
 
 	@Test
@@ -41,7 +41,7 @@ public class Screenshots_Example1 {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.shaadi.com/");
-		WebElement logo = driver.findElement(By.xpath("//div[@id='_next']/child::div[1]"));
+		WebElement logo = driver.findElement(By.xpath("//div[@id = '__next']/child::div[1]"));
 		File source = logo.getScreenshotAs(OutputType.FILE);
 		File destination = new File(
 				System.getProperty("user.dir") + "\\test-output\\Screenshots\\ShaadiHomeBanner.png");
@@ -53,7 +53,7 @@ public class Screenshots_Example1 {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://tutorialsninja.com/demo");
-		WebElement logo = driver.findElement(By.xpath("//div[@id='logo']"));
+		WebElement logo = driver.findElement(By.xpath("//div[@id = 'logo']"));
 		File source = logo.getScreenshotAs(OutputType.FILE);
 		File destination = new File(System.getProperty("user.dir") + "\\test-output\\Screenshots\\TNLogo");
 		FileHandler.copy(source, destination);

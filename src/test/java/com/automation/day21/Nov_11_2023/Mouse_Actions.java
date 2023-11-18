@@ -45,7 +45,6 @@ public class Mouse_Actions {
 
 		WebElement loginButton = driver.findElement(By.id("shwlogn"));
 		action.moveToElement(loginButton).click().build().perform();
-
 	}
 
 	@Test
@@ -68,7 +67,7 @@ public class Mouse_Actions {
 		driver.switchTo().frame(0);
 
 		Actions action = new Actions(driver);
-		
+
 		WebElement source = driver.findElement(By.id("draggable"));
 		action.dragAndDropBy(source, 100, 200).build().perform();
 

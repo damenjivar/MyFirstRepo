@@ -22,3 +22,4 @@ public class Concepts_Waits {
 	// and polling intervals.
 
 }
+ 

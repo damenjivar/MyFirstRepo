@@ -8,7 +8,6 @@ import org.testng.annotations.Test;
 
 public class Rediff__Login_BraveBrowser {
 
-	//HW 
 	// Step 1: Download and install Brave browser in your laptop.
 	// Step 2: You need the path where the brave.exe file is
 	// Step 3: You have to use ChromeOptions and with the options reference call the
@@ -19,7 +18,7 @@ public class Rediff__Login_BraveBrowser {
 	@Test
 	public void checkingBraveBrowser() {
 		ChromeOptions options = new ChromeOptions();
-		options.setBinary("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application");
+		options.setBinary("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
 		options.addArguments("--start-maximized");
 		driver = new ChromeDriver(options);
 		driver.get("https://mail.rediff.com/cgi-bin/login.cgi");

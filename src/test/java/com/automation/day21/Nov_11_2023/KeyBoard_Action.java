@@ -46,8 +46,8 @@ public class KeyBoard_Action {
 		// action.click(signInButton).perform();
 
 		action.click(username).sendKeys("seleniumpanda@rediffmail.com").sendKeys(Keys.TAB).perform();
-		password.sendKeys("Selenium@123");
-		signInButton.sendKeys(Keys.ENTER);
+		password.sendKeys("Selenium@123"); // WHY DON'T WE NEED TO USE .PERFORM() HERE? IS IT ONLY FOR ACTIONS CLASS?
+		signInButton.sendKeys(Keys.ENTER); //WHY DONT WE NEED TO USE ACTION. FIRST?
 	}
 
 	@Test
@@ -76,7 +76,7 @@ public class KeyBoard_Action {
 	}
 
 	@Test
-	public void registerTNTest() {
+	public void registerTNTest() throws Exception {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://tutorialsninja.com/demo");
@@ -94,13 +94,20 @@ public class KeyBoard_Action {
 		WebElement privacyPolicy = driver.findElement(By.name("agree"));
 		WebElement continueButton = driver.findElement(By.cssSelector("input.btn.btn-primary"));
 
-		action.click(firstname).sendKeys("selenium").perform();
-		action.click(lastname).sendKeys("panda").perform();
-		action.click(email).sendKeys(Util.emailWithDateTimeStamp()).perform();
-		action.click(telephone).sendKeys("7039123123123").perform();
+		action.click(firstname).sendKeys("selenium").sendKeys(Keys.TAB).perform();
+		lastname.sendKeys("panda");
+		action.click(email).sendKeys(Util.emailWithDateTimeStamp()).sendKeys(Keys.TAB).perform();
+		telephone.sendKeys("1234567890");
 		action.click(password).sendKeys("Selenium@123").perform();
-		action.click(confirmpassword).sendKeys("Selenium@123").perform();
+		Thread.sleep(2000);
+		action.keyDown(password, Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).perform();
+		Thread.sleep(2000);
+		action.keyDown(password, Keys.CONTROL).sendKeys("c").keyUp(Keys.CONTROL).perform();
+		Thread.sleep(2000);
+		action.click(confirmpassword).keyDown(Keys.CONTROL).sendKeys("v").keyUp(Keys.CONTROL).perform();
 		action.click(privacyPolicy).perform();
-		action.click(continueButton).perform();
+		continueButton.sendKeys(Keys.ENTER);
+		
+		//WHY IS THE PASSWORD COMBINATION WRONG???
 	}
 }

@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.automation.day22.Nov_12_2023.DatePicker_Practice">
+      <class name="com.automation.day21.Nov_11_2023.KeyBoard_Action">
         <methods>
-          <include name="datePickerTest1"/>
+          <include name="rediffLoginTest2"/>
+          <include name="registerTNTest"/>
         </methods>
-      </class> <!-- com.automation.day22.Nov_12_2023.DatePicker_Practice -->
+      </class> <!-- com.automation.day21.Nov_11_2023.KeyBoard_Action -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
